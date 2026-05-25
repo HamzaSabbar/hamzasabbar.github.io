@@ -6,76 +6,83 @@
   <title>Hamza Sabbar</title>
 
   <style>
+    :root {
+      --bg: #f6f7f9;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --dark: #111827;
+      --card: #ffffff;
+      --accent: #d4af37;
+      --border: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
-      color: #1f1f1f;
-      line-height: 1.6;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
     }
 
     .container {
-      width: 85%;
-      max-width: 1100px;
+      width: 90%;
+      max-width: 1050px;
       margin: auto;
-      padding: 50px 0;
     }
 
     header {
+      padding: 28px 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 30px 0;
-      border-bottom: 1px solid #ddd;
     }
 
     .logo {
-      font-size: 26px;
-      font-weight: bold;
+      font-size: 22px;
+      font-weight: 700;
     }
 
     nav a {
-      margin-left: 20px;
+      margin-left: 22px;
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: var(--dark);
     }
 
     .hero {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 50px;
-      align-items: center;
       padding: 70px 0;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+      align-items: center;
     }
 
     .hero h1 {
-      font-size: 52px;
-      margin-bottom: 10px;
+      font-size: 56px;
+      line-height: 1.1;
+      margin: 0 0 15px;
+      color: var(--dark);
     }
 
     .hero h2 {
-      font-size: 24px;
-      font-weight: normal;
-      color: #555;
-      margin-bottom: 25px;
+      font-size: 22px;
+      font-weight: 400;
+      color: var(--muted);
+      margin: 0 0 25px;
     }
 
     .hero p {
       font-size: 18px;
-      color: #444;
-    }
-
-    .profile-box {
-      background: #111827;
-      color: white;
-      padding: 40px;
-      border-radius: 20px;
-    }
-
-    .profile-box h3 {
-      margin-top: 0;
-      color: #d4af37;
+      max-width: 680px;
+      color: #374151;
     }
 
     .buttons {
@@ -84,73 +91,113 @@
 
     .btn {
       display: inline-block;
-      padding: 12px 20px;
+      padding: 12px 18px;
       margin-right: 10px;
-      background: #111827;
-      color: white;
-      text-decoration: none;
       border-radius: 8px;
-      font-weight: bold;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      background: var(--dark);
+      color: white;
     }
 
     .btn.secondary {
-      background: white;
-      color: #111827;
-      border: 1px solid #111827;
+      background: transparent;
+      color: var(--dark);
+      border: 1px solid var(--dark);
+    }
+
+    .profile {
+      background: var(--dark);
+      color: white;
+      padding: 30px;
+      border-radius: 18px;
+    }
+
+    .profile h3 {
+      margin-top: 0;
+      color: var(--accent);
+    }
+
+    .profile p {
+      margin: 10px 0;
+      color: #e5e7eb;
     }
 
     section {
-      margin-bottom: 60px;
+      margin-bottom: 55px;
     }
 
     section h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      border-left: 5px solid #d4af37;
-      padding-left: 15px;
+      font-size: 28px;
+      margin-bottom: 22px;
+      color: var(--dark);
     }
 
     .card {
-      background: white;
-      padding: 25px;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 14px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
     }
 
     .card h3 {
       margin-top: 0;
-      color: #111827;
+      margin-bottom: 8px;
+      color: var(--dark);
+    }
+
+    .card p {
+      margin-bottom: 12px;
+      color: #374151;
+    }
+
+    .tags {
+      margin-top: 12px;
     }
 
     .tag {
       display: inline-block;
-      background: #f1f1f1;
-      padding: 6px 10px;
+      padding: 5px 10px;
+      margin: 4px 4px 0 0;
       border-radius: 20px;
+      background: #f3f4f6;
+      color: #374151;
       font-size: 13px;
-      margin-right: 6px;
-      margin-top: 6px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
     }
 
     footer {
+      padding: 35px 0;
       text-align: center;
-      padding: 30px 0;
-      color: #666;
-      border-top: 1px solid #ddd;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-size: 14px;
     }
 
     @media (max-width: 800px) {
+      nav {
+        display: none;
+      }
+
       .hero {
         grid-template-columns: 1fr;
+        padding: 45px 0;
       }
 
       .hero h1 {
-        font-size: 38px;
+        font-size: 40px;
       }
 
-      nav {
-        display: none;
+      .grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -164,21 +211,23 @@
       <div class="logo">Hamza Sabbar</div>
       <nav>
         <a href="#about">About</a>
-        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main>
+
       <section class="hero">
         <div>
           <h1>Hamza Sabbar</h1>
           <h2>AI Engineering Student | Data & Business | Entrepreneurship</h2>
+
           <p>
-            I am an AI engineering student at ENSIAS, interested in the intersection
-            of artificial intelligence, data, business strategy, and entrepreneurship.
-            I build projects that combine technology, product thinking, and real-world impact.
+            I am an engineering student at ENSIAS, interested in artificial intelligence,
+            data analytics, business strategy, and entrepreneurship. I enjoy building projects
+            that combine technology, product thinking, and real-world impact.
           </p>
 
           <div class="buttons">
@@ -187,36 +236,23 @@
           </div>
         </div>
 
-        <div class="profile-box">
+        <div class="profile">
           <h3>Profile</h3>
           <p><strong>School:</strong> ENSIAS</p>
-          <p><strong>Field:</strong> Artificial Intelligence / Data</p>
-          <p><strong>Interests:</strong> Strategy Consulting, EdTech, VC, AI Products</p>
+          <p><strong>Field:</strong> AI / Data</p>
           <p><strong>Location:</strong> Rabat, Morocco</p>
+          <p><strong>Interests:</strong> Consulting, EdTech, VC, AI Products</p>
         </div>
       </section>
 
       <section id="about">
-        <h2>About me</h2>
+        <h2>About</h2>
         <div class="card">
           <p>
-            I am currently studying engineering at ENSIAS with a strong interest in AI,
-            data analytics, business strategy, and entrepreneurship. My goal is to develop
-            a hybrid profile combining technical skills, business understanding, and leadership.
+            I am building a hybrid profile at the intersection of AI, data, business,
+            and entrepreneurship. My goal is to use technology to solve concrete problems,
+            create useful products, and contribute to ambitious projects with real impact.
           </p>
-          <p>
-            I am particularly interested in AI-powered products, EdTech, startup analysis,
-            and data-driven decision-making.
-          </p>
-        </div>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <div class="card">
-          <h3>ENSIAS — Engineering Degree</h3>
-          <p>Artificial Intelligence / Data-oriented engineering program.</p>
-          <p>Rabat, Morocco</p>
         </div>
       </section>
 
@@ -226,61 +262,86 @@
         <div class="card">
           <h3>President — ENSIAS Founders Club</h3>
           <p>
-            Leading an entrepreneurship-focused student club, organizing events,
-            connecting students with founders, mentors, incubators, and ecosystem actors.
+            Leading an entrepreneurship-focused student club that connects students with
+            founders, mentors, incubators, and startup ecosystem actors.
           </p>
-          <span class="tag">Leadership</span>
-          <span class="tag">Entrepreneurship</span>
-          <span class="tag">Events</span>
+          <div class="tags">
+            <span class="tag">Leadership</span>
+            <span class="tag">Entrepreneurship</span>
+            <span class="tag">Events</span>
+          </div>
         </div>
 
         <div class="card">
           <h3>Mathematics & Physics Tutor</h3>
           <p>
-            Supporting high-school students through structured explanations,
-            exercises, and exam preparation.
+            Supporting high-school students through structured explanations, exercises,
+            and exam preparation.
           </p>
-          <span class="tag">Teaching</span>
-          <span class="tag">Education</span>
+          <div class="tags">
+            <span class="tag">Teaching</span>
+            <span class="tag">Education</span>
+          </div>
         </div>
       </section>
 
       <section id="projects">
         <h2>Projects</h2>
 
-        <div class="card">
-          <h3>AI-Powered Startup Due Diligence Platform</h3>
-          <p>
-            A platform that collects public information about startups, analyzes market signals,
-            and generates an investment-oriented score.
-          </p>
-          <span class="tag">AI</span>
-          <span class="tag">Web Ingestion</span>
-          <span class="tag">VC</span>
-          <span class="tag">Startup Scoring</span>
-        </div>
+        <div class="grid">
 
-        <div class="card">
-          <h3>TOUT EN UN — Moroccan EdTech Platform</h3>
-          <p>
-            An educational platform designed to help Moroccan Bac students through structured courses,
-            exercises, live sessions, and AI-based personalization.
-          </p>
-          <span class="tag">EdTech</span>
-          <span class="tag">AI</span>
-          <span class="tag">Education</span>
-        </div>
+          <div class="card">
+            <h3>AI Startup Due Diligence Platform</h3>
+            <p>
+              A platform that collects public startup information, analyzes market signals,
+              and generates an investment-oriented score.
+            </p>
+            <div class="tags">
+              <span class="tag">AI</span>
+              <span class="tag">Web Ingestion</span>
+              <span class="tag">VC</span>
+            </div>
+          </div>
 
-        <div class="card">
-          <h3>RAG Chatbot for Enterprise Data</h3>
-          <p>
-            A retrieval-augmented generation system allowing users to ask questions over private
-            documents and structured data sources.
-          </p>
-          <span class="tag">RAG</span>
-          <span class="tag">LangChain</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">Vector Database</span>
+          <div class="card">
+            <h3>TOUT EN UN</h3>
+            <p>
+              A Moroccan EdTech platform designed to help Bac students through structured
+              courses, exercises, live sessions, and AI-based personalization.
+            </p>
+            <div class="tags">
+              <span class="tag">EdTech</span>
+              <span class="tag">AI</span>
+              <span class="tag">Education</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>RAG Chatbot for Enterprise Data</h3>
+            <p>
+              A retrieval-augmented generation system allowing users to ask questions over
+              private documents and structured data sources.
+            </p>
+            <div class="tags">
+              <span class="tag">RAG</span>
+              <span class="tag">LangChain</span>
+              <span class="tag">FastAPI</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Data & BI Projects</h3>
+            <p>
+              Data analysis and dashboard projects focused on KPIs, visualization,
+              and decision-making.
+            </p>
+            <div class="tags">
+              <span class="tag">BI</span>
+              <span class="tag">Analytics</span>
+              <span class="tag">Dashboards</span>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -288,14 +349,23 @@
         <h2>Contact</h2>
         <div class="card">
           <p><strong>Email:</strong> your.email@example.com</p>
-          <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/hamza-sabbar-1428a1284/</p>
-          <p><strong>GitHub:</strong> https://github.com/yourusername</p>
+          <p><strong>LinkedIn:</strong> 
+            <a href="https://www.linkedin.com/in/hamza-sabbar-1428a1284/" target="_blank">
+              linkedin.com/in/hamza-sabbar-1428a1284
+            </a>
+          </p>
+          <p><strong>GitHub:</strong> 
+            <a href="https://github.com/yourusername" target="_blank">
+              github.com/yourusername
+            </a>
+          </p>
         </div>
       </section>
+
     </main>
 
     <footer>
-      © 2026 Hamza Sabbar — Personal Portfolio
+      © 2026 Hamza Sabbar. Built with HTML & CSS.
     </footer>
 
   </div>
