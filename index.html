@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hamza Sabbar</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #1f1f1f;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1100px;
+      margin: auto;
+      padding: 50px 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 50px;
+      align-items: center;
+      padding: 70px 0;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 24px;
+      font-weight: normal;
+      color: #555;
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .profile-box {
+      background: #111827;
+      color: white;
+      padding: 40px;
+      border-radius: 20px;
+    }
+
+    .profile-box h3 {
+      margin-top: 0;
+      color: #d4af37;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      margin-right: 10px;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: white;
+      color: #111827;
+      border: 1px solid #111827;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      border-left: 5px solid #d4af37;
+      padding-left: 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #f1f1f1;
+      padding: 6px 10px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-right: 6px;
+      margin-top: 6px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="logo">Hamza Sabbar</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Hamza Sabbar</h1>
+          <h2>AI Engineering Student | Data & Business | Entrepreneurship</h2>
+          <p>
+            I am an AI engineering student at ENSIAS, interested in the intersection
+            of artificial intelligence, data, business strategy, and entrepreneurship.
+            I build projects that combine technology, product thinking, and real-world impact.
+          </p>
+
+          <div class="buttons">
+            <a class="btn" href="cv.pdf" target="_blank">Download CV</a>
+            <a class="btn secondary" href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="profile-box">
+          <h3>Profile</h3>
+          <p><strong>School:</strong> ENSIAS</p>
+          <p><strong>Field:</strong> Artificial Intelligence / Data</p>
+          <p><strong>Interests:</strong> Strategy Consulting, EdTech, VC, AI Products</p>
+          <p><strong>Location:</strong> Rabat, Morocco</p>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>About me</h2>
+        <div class="card">
+          <p>
+            I am currently studying engineering at ENSIAS with a strong interest in AI,
+            data analytics, business strategy, and entrepreneurship. My goal is to develop
+            a hybrid profile combining technical skills, business understanding, and leadership.
+          </p>
+          <p>
+            I am particularly interested in AI-powered products, EdTech, startup analysis,
+            and data-driven decision-making.
+          </p>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="card">
+          <h3>ENSIAS — Engineering Degree</h3>
+          <p>Artificial Intelligence / Data-oriented engineering program.</p>
+          <p>Rabat, Morocco</p>
+        </div>
+      </section>
+
+      <section id="experience">
+        <h2>Experience & Leadership</h2>
+
+        <div class="card">
+          <h3>President — ENSIAS Founders Club</h3>
+          <p>
+            Leading an entrepreneurship-focused student club, organizing events,
+            connecting students with founders, mentors, incubators, and ecosystem actors.
+          </p>
+          <span class="tag">Leadership</span>
+          <span class="tag">Entrepreneurship</span>
+          <span class="tag">Events</span>
+        </div>
+
+        <div class="card">
+          <h3>Mathematics & Physics Tutor</h3>
+          <p>
+            Supporting high-school students through structured explanations,
+            exercises, and exam preparation.
+          </p>
+          <span class="tag">Teaching</span>
+          <span class="tag">Education</span>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="card">
+          <h3>AI-Powered Startup Due Diligence Platform</h3>
+          <p>
+            A platform that collects public information about startups, analyzes market signals,
+            and generates an investment-oriented score.
+          </p>
+          <span class="tag">AI</span>
+          <span class="tag">Web Ingestion</span>
+          <span class="tag">VC</span>
+          <span class="tag">Startup Scoring</span>
+        </div>
+
+        <div class="card">
+          <h3>TOUT EN UN — Moroccan EdTech Platform</h3>
+          <p>
+            An educational platform designed to help Moroccan Bac students through structured courses,
+            exercises, live sessions, and AI-based personalization.
+          </p>
+          <span class="tag">EdTech</span>
+          <span class="tag">AI</span>
+          <span class="tag">Education</span>
+        </div>
+
+        <div class="card">
+          <h3>RAG Chatbot for Enterprise Data</h3>
+          <p>
+            A retrieval-augmented generation system allowing users to ask questions over private
+            documents and structured data sources.
+          </p>
+          <span class="tag">RAG</span>
+          <span class="tag">LangChain</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Vector Database</span>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <div class="card">
+          <p><strong>Email:</strong> your.email@example.com</p>
+          <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/yourprofile</p>
+          <p><strong>GitHub:</strong> https://github.com/yourusername</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 Hamza Sabbar — Personal Portfolio
+    </footer>
+
+  </div>
+
+</body>
+</html>
